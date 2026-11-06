@@ -1,0 +1,50 @@
+[gd_scene format=3 uid="uid://c83sdxrsq82q2"]
+
+[node name="dialogue_ui" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="canvas" type="CanvasLayer" parent="."]
+
+[node name="bg" type="ColorRect" parent="canvas"]
+offset_left = 1.0
+offset_top = 502.0
+offset_right = 1151.0
+offset_bottom = 646.0
+color = Color(0.533064, 0.0929088, 0.791113, 1)
+
+[node name="speaker_name" type="RichTextLabel" parent="canvas"]
+offset_left = 10.0
+offset_top = 513.0
+offset_right = 440.0
+offset_bottom = 566.0
+theme_override_font_sizes/bold_italics_font_size = 16
+theme_override_font_sizes/italics_font_size = 16
+theme_override_font_sizes/mono_font_size = 16
+theme_override_font_sizes/normal_font_size = 32
+theme_override_font_sizes/bold_font_size = 16
+text = "This is the NPCs name"
+
+[node name="dialogue_text" type="RichTextLabel" parent="canvas"]
+offset_left = 10.0
+offset_top = 558.0
+offset_right = 1143.0
+offset_bottom = 636.0
+theme_override_font_sizes/bold_italics_font_size = 16
+theme_override_font_sizes/italics_font_size = 16
+theme_override_font_sizes/mono_font_size = 16
+theme_override_font_sizes/normal_font_size = 24
+theme_override_font_sizes/bold_font_size = 16
+text = "This is the NPCs dialogue
+"
+
+[node name="continue" type="Button" parent="canvas"]
+offset_left = 977.0
+offset_top = 513.0
+offset_right = 1141.0
+offset_bottom = 550.0
+text = "Continue"
