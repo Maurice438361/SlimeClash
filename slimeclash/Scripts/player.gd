@@ -1,8 +1,8 @@
 extends CharacterBody3D
 
 
-const SPEED = 5.0
-const JUMP_VELOCITY = 4.5
+var SPEED = 5.0
+var JUMP_VELOCITY = 4.5
 
 var sensitivity = 0.003
 @onready var camera = $Camera3D
@@ -10,7 +10,7 @@ var sensitivity = 0.003
 func _ready():
 	Input.mouse_mode = Input.MOUSE_MODE_CAPTURED
 
-func _process(delta):
+func _process(_delta):
 	if Input.is_action_just_pressed("escape"):
 		get_tree().quit()
 

@@ -1,6 +1,8 @@
-[gd_scene load_steps=8 format=3 uid="uid://c83d7qwec7hga"]
+[gd_scene load_steps=11 format=3 uid="uid://c83d7qwec7hga"]
 
 [ext_resource type="PackedScene" uid="uid://btexn452patpm" path="res://Objects/player.tscn" id="1_a02cp"]
+[ext_resource type="PackedScene" uid="uid://o3ufcfihvcb" path="res://Scenes/dialogue_trigger.tscn" id="2_go701"]
+[ext_resource type="PackedScene" uid="uid://c83sdxrsq82q2" path="res://Scenes/dialogue_ui.tscn" id="3_5a7ea"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_a02cp"]
 
@@ -20,44 +22,58 @@ albedo_color = Color(0, 0.624433, 0.586008, 1)
 size = Vector2(100, 100)
 orientation = 1
 
-[node name="World" type="Node3D"]
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_go701"]
+
+[node name="world" type="Node3D"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.200516, -3.8147e-06, 0.0847015)
 
-[node name="Floor" type="StaticBody3D" parent="."]
+[node name="floor" type="StaticBody3D" parent="."]
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Floor"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="floor"]
 transform = Transform3D(50, 0, 0, 0, 1, 0, 0, 0, 50, 0, -0.5, 0)
 shape = SubResource("BoxShape3D_a02cp")
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="Floor"]
+[node name="MeshInstance3D" type="MeshInstance3D" parent="floor"]
 mesh = SubResource("QuadMesh_yp4wr")
 surface_material_override/0 = SubResource("StandardMaterial3D_yp4wr")
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
 transform = Transform3D(0.707107, -0.5, 0.5, 0, 0.707107, 0.707107, -0.707107, -0.5, 0.5, 25, 25, 25)
 
-[node name="Player" parent="." instance=ExtResource("1_a02cp")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.00508, 0)
+[node name="player" parent="." instance=ExtResource("1_a02cp")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10.6695, 1.00508, 0)
 
-[node name="Map borders" type="StaticBody3D" parent="."]
+[node name="map_borders" type="StaticBody3D" parent="."]
 
-[node name="CollisionShapeBorder1" type="CollisionShape3D" parent="Map borders"]
+[node name="CollisionShapeBorder1" type="CollisionShape3D" parent="map_borders"]
 transform = Transform3D(50, 0, 0, 0, 10, 0, 0, 0, 1, 0, 5, 25.5)
 shape = SubResource("BoxShape3D_go701")
 
-[node name="CollisionShapeBorder2" type="CollisionShape3D" parent="Map borders"]
+[node name="CollisionShapeBorder2" type="CollisionShape3D" parent="map_borders"]
 transform = Transform3D(50, 0, 0, 0, 10, 0, 0, 0, 1, 0, 5, -25.5)
 shape = SubResource("BoxShape3D_go701")
 
-[node name="CollisionShapeBorder3" type="CollisionShape3D" parent="Map borders"]
+[node name="CollisionShapeBorder3" type="CollisionShape3D" parent="map_borders"]
 transform = Transform3D(-2.18557e-06, 0, 1, 0, 10, 0, -50, 0, -4.37114e-08, 25.5, 5, 0)
 shape = SubResource("BoxShape3D_go701")
 
-[node name="CollisionShapeBorder4" type="CollisionShape3D" parent="Map borders"]
+[node name="CollisionShapeBorder4" type="CollisionShape3D" parent="map_borders"]
 transform = Transform3D(-2.18557e-06, 0, 1, 0, 10, 0, -50, 0, -4.37114e-08, -25.5, 5, 0)
 shape = SubResource("BoxShape3D_go701")
 
-[node name="MeshOcean" type="MeshInstance3D" parent="Map borders"]
+[node name="MeshOcean" type="MeshInstance3D" parent="map_borders"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0888596, -0.1, -0.173302)
 material_override = SubResource("StandardMaterial3D_5a7ea")
 mesh = SubResource("QuadMesh_8j60k")
+
+[node name="dummy" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 14.3024, 1.26834, 0)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="dummy"]
+mesh = SubResource("CapsuleMesh_go701")
+
+[node name="dialogue_ui" parent="." instance=ExtResource("3_5a7ea")]
+
+[node name="dialogue_trigger" parent="." node_paths=PackedStringArray("speaker") instance=ExtResource("2_go701")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 14.2808, 1.72079, 0)
+speaker = NodePath("../dummy")
