@@ -13,6 +13,7 @@ var current_dialogue = -1
 var started = false
 
 func _ready() -> void:
+	dialogue_ui.visible = false
 	dialogue_ui.get_node("continue").connect("pressed", Callable(self, "continue_dialogue"))
 
 func start_dialogue(body):
