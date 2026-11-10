@@ -9,6 +9,7 @@ var sensitivity = 0.003
 
 func _ready():
 	Input.mouse_mode = Input.MOUSE_MODE_CAPTURED
+	print("Mouse sensitivity: ", sensitivity)
 
 func _process(_delta):
 	if Input.is_action_just_pressed("escape"):
