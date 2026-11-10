@@ -41,7 +41,7 @@ surface_material_override/0 = SubResource("StandardMaterial3D_yp4wr")
 transform = Transform3D(0.707107, -0.5, 0.5, 0, 0.707107, 0.707107, -0.707107, -0.5, 0.5, 25, 25, 25)
 
 [node name="player" parent="." instance=ExtResource("1_a02cp")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10.6695, 1.00508, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.005, 0)
 
 [node name="map_borders" type="StaticBody3D" parent="."]
 
@@ -75,5 +75,5 @@ mesh = SubResource("CapsuleMesh_go701")
 [node name="dialogue_ui" parent="." instance=ExtResource("3_5a7ea")]
 
 [node name="dialogue_trigger" parent="." node_paths=PackedStringArray("speaker") instance=ExtResource("2_go701")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 14.2808, 1.72079, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 14.3549, 1.68316, 0)
 speaker = NodePath("../dummy")

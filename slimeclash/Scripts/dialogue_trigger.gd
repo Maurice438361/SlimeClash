@@ -26,11 +26,13 @@ func start_dialogue(body):
 		player.look_at(player.global_transform.origin)
 		speaker.rotation_degrees.x = 0.0
 		speaker.rotation_degrees.z = 0.0
+		continue_dialogue()
 
 func end_dialogue():
 	player.SPEED = 5.0
 	player.sensitivity = 0.003
 	Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
+	current_dialogue = -1
 	dialogue_ui.visible = false
 
 func continue_dialogue():
