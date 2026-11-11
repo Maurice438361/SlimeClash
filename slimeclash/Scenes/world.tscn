@@ -1,4 +1,4 @@
-[gd_scene load_steps=19 format=3 uid="uid://c83d7qwec7hga"]
+[gd_scene load_steps=20 format=3 uid="uid://c83d7qwec7hga"]
 
 [ext_resource type="Texture2D" uid="uid://b3xnufbchv6je" path="res://Assets/Skies/sky_103_2k.png" id="1_5ukr8"]
 [ext_resource type="PackedScene" uid="uid://btexn452patpm" path="res://Objects/player.tscn" id="1_a02cp"]
