@@ -6,6 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://c83sdxrsq82q2" path="res://Scenes/dialogue_ui.tscn" id="3_5a7ea"]
 [ext_resource type="PackedScene" uid="uid://dyj56a4uguck0" path="res://mobs.tscn" id="4_8j60k"]
 [ext_resource type="PackedScene" uid="uid://csaa3nt6q4877" path="res://Assets/map_skin.tscn" id="5_fo5ed"]
+[ext_resource type="PackedScene" uid="uid://di5tshwawmiv7" path="res://slimemob.glb" id="6_slimemob"]
 
 [sub_resource type="Shader" id="Shader_5ukr8"]
 code = "
@@ -37,7 +38,6 @@ background_mode = 2
 sky = SubResource("Sky_k7acu")
 tonemap_mode = 2
 glow_enabled = true
-[ext_resource type="PackedScene" uid="uid://di5tshwawmiv7" path="res://slimemob.glb" id="5_fo5ed"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_a02cp"]
 
@@ -132,5 +132,6 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12.9865, 0.103589, -13.7027)
 
 [node name="blender base_map" parent="environment" instance=ExtResource("5_fo5ed")]
 transform = Transform3D(80, 0, 0, 0, 80, 0, 0, 0, 80, 0, -0.705284, 0)
-[node name="slimemob" parent="." instance=ExtResource("5_fo5ed")]
+
+[node name="slimemob" parent="." instance=ExtResource("6_slimemob")]
 transform = Transform3D(-0.0859734, 0, -0.996297, 0, 1, 0, 0.996297, 0, -0.0859734, 15.5548, 0.00624132, 8.87892)
