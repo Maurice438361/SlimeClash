@@ -14,6 +14,12 @@ func _ready():
 func _process(_delta):
 	if Input.is_action_just_pressed("escape"):
 		get_tree().quit()
+		
+	if Input.is_action_just_pressed("free"):
+		if Input.mouse_mode == Input.MOUSE_MODE_CAPTURED:
+			Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
+		else:
+			Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
 
 func _unhandled_input(event):
 	if event is InputEventMouseMotion:
