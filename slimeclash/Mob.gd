@@ -1,6 +1,6 @@
 extends StaticBody3D
 
-@export var max_health: int = 100
+@export var max_health: int = 25
 
 var current_health: int
 

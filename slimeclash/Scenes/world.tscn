@@ -1,9 +1,10 @@
-[gd_scene load_steps=12 format=3 uid="uid://c83d7qwec7hga"]
+[gd_scene load_steps=13 format=3 uid="uid://c83d7qwec7hga"]
 
 [ext_resource type="PackedScene" uid="uid://btexn452patpm" path="res://Objects/player.tscn" id="1_a02cp"]
 [ext_resource type="PackedScene" uid="uid://o3ufcfihvcb" path="res://Scenes/dialogue_trigger.tscn" id="2_go701"]
 [ext_resource type="PackedScene" uid="uid://c83sdxrsq82q2" path="res://Scenes/dialogue_ui.tscn" id="3_5a7ea"]
 [ext_resource type="PackedScene" uid="uid://dyj56a4uguck0" path="res://mobs.tscn" id="4_8j60k"]
+[ext_resource type="PackedScene" uid="uid://di5tshwawmiv7" path="res://slimemob.glb" id="5_fo5ed"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_a02cp"]
 
@@ -81,3 +82,6 @@ speaker = NodePath("../dummy")
 
 [node name="mob" parent="." instance=ExtResource("4_8j60k")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12.9865, 0.103589, -13.7027)
+
+[node name="slimemob" parent="." instance=ExtResource("5_fo5ed")]
+transform = Transform3D(-0.0859734, 0, -0.996297, 0, 1, 0, 0.996297, 0, -0.0859734, 15.5548, 0.00624132, 8.87892)
