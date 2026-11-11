@@ -53,9 +53,9 @@ albedo_color = Color(0.862149, 0.664195, 1, 1)
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_5a7ea"]
 albedo_color = Color(0, 0.81161, 0.963242, 1)
 
-[sub_resource type="QuadMesh" id="QuadMesh_8j60k"]
-size = Vector2(100, 100)
-orientation = 1
+[sub_resource type="CylinderMesh" id="CylinderMesh_o06y3"]
+top_radius = 50.0
+height = 0.1
 
 [sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_fo5ed"]
 data = PackedVector3Array(50, 0, 50, -50, 0, 50, 50, 0, -50, -50, 0, 50, -50, 0, -50, 50, 0, -50)
@@ -104,9 +104,9 @@ transform = Transform3D(-2.18557e-06, 0, 1, 0, 10, 0, -50, 0, -4.37114e-08, -28.
 shape = SubResource("BoxShape3D_go701")
 
 [node name="MeshOcean" type="MeshInstance3D" parent="map_borders"]
-transform = Transform3D(2, 0, 0, 0, 1, 0, 0, 0, 2, -0.0888596, -0.1, -0.173302)
+transform = Transform3D(2, 0, 0, 0, 1, 0, 0, 0, 2, -0.0888596, -0.154342, -0.173302)
 material_override = SubResource("StandardMaterial3D_5a7ea")
-mesh = SubResource("QuadMesh_8j60k")
+mesh = SubResource("CylinderMesh_o06y3")
 
 [node name="StaticBody3D" type="StaticBody3D" parent="map_borders/MeshOcean"]
 
