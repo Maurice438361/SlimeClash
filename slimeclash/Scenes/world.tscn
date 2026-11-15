@@ -146,13 +146,13 @@ mesh = SubResource("CylinderMesh_o06y3")
 shape = SubResource("ConcavePolygonShape3D_fo5ed")
 
 [node name="dummy" type="Node3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -49.4184, 8.1522, 40.4854)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 14.3024, 1.26834, 0)
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="dummy"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -60.4605, 5.77452, 24.7974)
 mesh = SubResource("CapsuleMesh_go701")
 
-[node name="dialogue_trigger" parent="dummy" node_paths=PackedStringArray("speaker") instance=ExtResource("2_go701")]
-speaker = NodePath("..")
+[node name="dialogue_ui" parent="." instance=ExtResource("3_5a7ea")]
 
 [node name="dialogue_trigger" parent="." node_paths=PackedStringArray("speaker") instance=ExtResource("2_go701")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -46.1066, 6.46159, 24.9602)
