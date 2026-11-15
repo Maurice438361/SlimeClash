@@ -16,7 +16,7 @@
 [ext_resource type="Script" uid="uid://2juaclm8gc1n" path="res://Addons/simplegrasstextured/grass.gd" id="10_e0ngr"]
 [ext_resource type="PackedScene" uid="uid://bynfsuwmksvk6" path="res://Assets/recoloured/tree4.glb" id="10_ikia7"]
 [ext_resource type="PackedScene" uid="uid://bq3gxllmk348p" path="res://Assets/recoloured/tree5.glb" id="11_7yui6"]
-[ext_resource type="Script" path="res://Scenes/rocks.gd" id="11_axeuq"]
+[ext_resource type="Script" uid="uid://cu7bt5kedd2gu" path="res://Scenes/rocks.gd" id="11_axeuq"]
 [ext_resource type="PackedScene" uid="uid://bi4dm0jbdy15c" path="res://Assets/pirate/GLB format/ship-small.glb" id="11_hgpy0"]
 [ext_resource type="PackedScene" uid="uid://4bhuv54uuil8" path="res://Assets/pirate/GLB format/rocks-b.glb" id="12_t2t4p"]
 [ext_resource type="PackedScene" uid="uid://cfnokks8n6dww" path="res://Assets/pirate/GLB format/rocks-a.glb" id="13_0pcbe"]
@@ -36,6 +36,7 @@
 [ext_resource type="PackedScene" uid="uid://pdw34rq5j6h6" path="res://Assets/fantasy/GLB format/pillar-wood.glb" id="22_no8kt"]
 [ext_resource type="Script" uid="uid://cwkfjp00oocyp" path="res://Scenes/mob.gd" id="23_i4fjy"]
 [ext_resource type="PackedScene" uid="uid://bjx25f5d3uper" path="res://Assets/fantasy/GLB format/stairs-wood.glb" id="23_xbk3s"]
+[ext_resource type="PackedScene" uid="uid://vp0ygbcpcht6" path="res://Assets/KayKit_Adventurers_2.0_FREE/Characters/gltf/Mage.glb" id="24_mage"]
 
 [sub_resource type="Shader" id="Shader_5ukr8"]
 code = "
@@ -328,6 +329,7 @@ surface_material_override/0 = SubResource("StandardMaterial3D_yp4wr")
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
 transform = Transform3D(-0.179252, -0.938848, -0.293996, 0.83005, -0.304739, 0.467067, -0.528097, -0.160309, 0.833915, -114.855, 168.833, 298.067)
+light_color = Color(1, 1, 0.419608, 1)
 
 [node name="player" parent="." instance=ExtResource("1_a02cp")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -61.5178, 3.08148, -27.6213)
@@ -941,3 +943,17 @@ transform = Transform3D(0.638553, 0, -0.769578, 0, 1, 0, 0.769578, 0, 0.638553, 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="mob2"]
 transform = Transform3D(0.638553, 0, -0.769578, 0, 1, 0, 0.769578, 0, 0.638553, -21.1833, 9.57412, -11.5862)
 shape = SubResource("BoxShape3D_hmc15")
+[node name="npc" type="StaticBody3D" parent="."]
+transform = Transform3D(-0.875802, 0, -0.482671, 0, 1, 0, 0.482671, 0, -0.875802, -56.1746, 1.43848, -13.3934)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="npc"]
+transform = Transform3D(1.5, 0, 0, 0, 1, 0, 0, 0, 1.5, 0, 1.12442, 0)
+shape = SubResource("CapsuleShape3D_1cojt")
+
+[node name="visual" type="Node3D" parent="npc"]
+
+[node name="Mage" parent="npc/visual" instance=ExtResource("24_mage")]
+
+[node name="dialogue_trigger" parent="npc" node_paths=PackedStringArray("speaker") instance=ExtResource("2_go701")]
+transform = Transform3D(1.5, 0, 0, 0, 1, 0, 0, 0, 1.5, 0, 0, 0)
+speaker = NodePath("..")

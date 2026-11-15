@@ -7,7 +7,7 @@ extends Node3D
 
 @export var dialogues: Array[String]
 @export var speaker_names: Array[String]
-@export var speaker: Node3D
+@export var speaker: StaticBody3D
 
 var current_dialogue = -1
 var started = false
