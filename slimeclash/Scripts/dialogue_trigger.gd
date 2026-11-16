@@ -25,7 +25,7 @@ func start_dialogue(body):
 		player.SPEED = 0.0
 		player.sensitivity = 0.0
 		dialogue_ui.visible = true
-		player.look_at(player.global_transform.origin)
+		
 		speaker.rotation_degrees.x = 0.0
 		speaker.rotation_degrees.z = 0.0
 		npc_animation.play("Use_Item")

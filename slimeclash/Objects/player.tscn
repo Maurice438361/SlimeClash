@@ -31,11 +31,18 @@ script = ExtResource("2_3y5cq")
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
 [node name="CenterContainer" type="CenterContainer" parent="CanvasLayer"]
-offset_right = 1153.0
-offset_bottom = 648.0
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = -4.0
+offset_bottom = -6.0
+grow_horizontal = 2
+grow_vertical = 2
 
 [node name="Label" type="Label" parent="CanvasLayer/CenterContainer"]
 layout_mode = 2
 theme_override_colors/font_color = Color(0.685311, 0.256744, 0.848545, 1)
 theme_override_font_sizes/font_size = 50
 text = "."
+horizontal_alignment = 1
+vertical_alignment = 1
