@@ -35,7 +35,7 @@ func show_slime_message() -> void:
 	var slime_label = Label.new()
 	hud.add_child(slime_label)
 
-	slime_label.text = "+1 Slime"
+	slime_label.text = "+1 Wheel"
 	slime_label.position = Vector2(30, 30)
 	slime_label.add_theme_font_size_override("font_size", 28)
 
