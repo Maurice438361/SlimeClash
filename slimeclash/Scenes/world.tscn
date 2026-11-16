@@ -5,9 +5,9 @@
 [ext_resource type="PackedScene" uid="uid://o3ufcfihvcb" path="res://Scenes/dialogue_trigger.tscn" id="2_go701"]
 [ext_resource type="PackedScene" uid="uid://c83sdxrsq82q2" path="res://Scenes/dialogue_ui.tscn" id="3_5a7ea"]
 [ext_resource type="PackedScene" uid="uid://csaa3nt6q4877" path="res://Assets/map_skin.tscn" id="5_fo5ed"]
+[ext_resource type="Shader" uid="uid://bi3o8elbtqoni" path="res://addons/simplegrasstextured/shaders/grass.gdshader" id="5_uqdn7"]
+[ext_resource type="Texture2D" uid="uid://c4ggdp0kg5wjk" path="res://addons/simplegrasstextured/textures/grassbushcc008.png" id="6_gwaj6"]
 [ext_resource type="PackedScene" uid="uid://di5tshwawmiv7" path="res://Assets/mobs/slimemob.glb" id="6_slimemob"]
-[ext_resource type="Shader" uid="uid://bi3o8elbtqoni" path="res://addons/simplegrasstextured/shaders/grass.gdshader" id="6_uqdn7"]
-[ext_resource type="Texture2D" uid="uid://c4ggdp0kg5wjk" path="res://addons/simplegrasstextured/textures/grassbushcc008.png" id="7_gwaj6"]
 [ext_resource type="PackedScene" uid="uid://5qhvbuy0pbj5" path="res://Assets/recoloured/palm2.glb" id="8_5v1tr"]
 [ext_resource type="PackedScene" uid="uid://30b4winr2qja" path="res://Assets/recoloured/palm.glb" id="9_0fj1v"]
 [ext_resource type="ArrayMesh" uid="uid://sptcpdx6wtm8" path="res://Addons/simplegrasstextured/default_mesh.tres" id="9_c5t2i"]
@@ -108,9 +108,9 @@ data = PackedVector3Array(50, 0, 50, -50, 0, 50, 50, 0, -50, -50, 0, 50, -50, 0,
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_36g3o"]
 render_priority = 0
-shader = ExtResource("6_uqdn7")
+shader = ExtResource("5_uqdn7")
 shader_parameter/albedo = Color(0.861553, 0.155252, 0.999999, 1)
-shader_parameter/texture_albedo = ExtResource("7_gwaj6")
+shader_parameter/texture_albedo = ExtResource("6_gwaj6")
 shader_parameter/texture_frames = Vector2(1, 1)
 shader_parameter/light_mode = 1
 shader_parameter/alpha_scissor_threshold = 0.5
@@ -142,9 +142,9 @@ buffer = PackedFloat32Array(0.432576, 0, 0.901597, -49.0695, 0, 1, 0, 7.30682, -
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_vhf2b"]
 render_priority = 0
-shader = ExtResource("6_uqdn7")
+shader = ExtResource("5_uqdn7")
 shader_parameter/albedo = Color(1, 0.429676, 0.821875, 1)
-shader_parameter/texture_albedo = ExtResource("7_gwaj6")
+shader_parameter/texture_albedo = ExtResource("6_gwaj6")
 shader_parameter/texture_frames = Vector2(1, 1)
 shader_parameter/light_mode = 1
 shader_parameter/alpha_scissor_threshold = 0.5
@@ -176,9 +176,9 @@ buffer = PackedFloat32Array(0.994556, 0, 0.104203, -26.2354, 0, 1, 0, 7.71334, -
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_g44x5"]
 render_priority = 0
-shader = ExtResource("6_uqdn7")
+shader = ExtResource("5_uqdn7")
 shader_parameter/albedo = Color(1, 0.642011, 0.905261, 1)
-shader_parameter/texture_albedo = ExtResource("7_gwaj6")
+shader_parameter/texture_albedo = ExtResource("6_gwaj6")
 shader_parameter/texture_frames = Vector2(1, 1)
 shader_parameter/light_mode = 1
 shader_parameter/alpha_scissor_threshold = 0.5
@@ -210,9 +210,9 @@ buffer = PackedFloat32Array(-0.892469, 0, 0.451108, -25.4994, 0, 1, 0, 9.86854, 
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_kwnki"]
 render_priority = 0
-shader = ExtResource("6_uqdn7")
+shader = ExtResource("5_uqdn7")
 shader_parameter/albedo = Color(1.73271e-06, 0.761191, 0.902932, 1)
-shader_parameter/texture_albedo = ExtResource("7_gwaj6")
+shader_parameter/texture_albedo = ExtResource("6_gwaj6")
 shader_parameter/texture_frames = Vector2(1, 1)
 shader_parameter/light_mode = 1
 shader_parameter/alpha_scissor_threshold = 0.5
@@ -244,9 +244,9 @@ buffer = PackedFloat32Array(0.93377, 0, -0.357874, 8.17313, 0, 1, 0, 7.97566, 0.
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_cvubk"]
 render_priority = 0
-shader = ExtResource("6_uqdn7")
+shader = ExtResource("5_uqdn7")
 shader_parameter/albedo = Color(0.403648, 1, 0.81758, 1)
-shader_parameter/texture_albedo = ExtResource("7_gwaj6")
+shader_parameter/texture_albedo = ExtResource("6_gwaj6")
 shader_parameter/texture_frames = Vector2(1, 1)
 shader_parameter/light_mode = 1
 shader_parameter/alpha_scissor_threshold = 0.5
@@ -278,9 +278,9 @@ buffer = PackedFloat32Array(-0.818934, 0, -0.573888, 24.1519, 0, 1, 0, 9.09777, 
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_eskoj"]
 render_priority = 0
-shader = ExtResource("6_uqdn7")
+shader = ExtResource("5_uqdn7")
 shader_parameter/albedo = Color(1, 1, 1, 1)
-shader_parameter/texture_albedo = ExtResource("7_gwaj6")
+shader_parameter/texture_albedo = ExtResource("6_gwaj6")
 shader_parameter/texture_frames = Vector2(1, 1)
 shader_parameter/light_mode = 1
 shader_parameter/alpha_scissor_threshold = 0.5
@@ -428,7 +428,10 @@ shape = SubResource("ConcavePolygonShape3D_fo5ed")
 [node name="blender base_map" parent="environment" instance=ExtResource("5_fo5ed")]
 transform = Transform3D(80, 0, 0, 0, 80, 0, 0, 0, 80, 0, -0.705284, 0)
 
-[node name="SimpleGrassTextured" type="MultiMeshInstance3D" parent="environment/blender base_map"]
+[node name="grass" type="Node3D" parent="environment"]
+
+[node name="SimpleGrassTextured" type="MultiMeshInstance3D" parent="environment/grass"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.705284, 0)
 material_override = SubResource("ShaderMaterial_36g3o")
 multimesh = SubResource("MultiMesh_ikia7")
 script = ExtResource("10_e0ngr")
@@ -449,7 +452,8 @@ sgt_tool_shape = {
 metadata/_custom_type_script = "uid://2juaclm8gc1n"
 metadata/SimpleGrassTextured = "2.0.5"
 
-[node name="SimpleGrassTextured2" type="MultiMeshInstance3D" parent="environment/blender base_map"]
+[node name="SimpleGrassTextured2" type="MultiMeshInstance3D" parent="environment/grass"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.705284, 0)
 material_override = SubResource("ShaderMaterial_vhf2b")
 multimesh = SubResource("MultiMesh_c5t2i")
 script = ExtResource("10_e0ngr")
@@ -472,7 +476,8 @@ sgt_tool_shape = {
 metadata/_custom_type_script = "uid://2juaclm8gc1n"
 metadata/SimpleGrassTextured = "2.0.5"
 
-[node name="SimpleGrassTextured3" type="MultiMeshInstance3D" parent="environment/blender base_map"]
+[node name="SimpleGrassTextured3" type="MultiMeshInstance3D" parent="environment/grass"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.705284, 0)
 material_override = SubResource("ShaderMaterial_g44x5")
 multimesh = SubResource("MultiMesh_kn0ld")
 script = ExtResource("10_e0ngr")
@@ -494,7 +499,8 @@ sgt_tool_shape = {
 metadata/_custom_type_script = "uid://2juaclm8gc1n"
 metadata/SimpleGrassTextured = "2.0.5"
 
-[node name="SimpleGrassTextured4" type="MultiMeshInstance3D" parent="environment/blender base_map"]
+[node name="SimpleGrassTextured4" type="MultiMeshInstance3D" parent="environment/grass"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.705284, 0)
 material_override = SubResource("ShaderMaterial_kwnki")
 multimesh = SubResource("MultiMesh_t2t4p")
 script = ExtResource("10_e0ngr")
@@ -516,7 +522,8 @@ sgt_tool_shape = {
 metadata/_custom_type_script = "uid://2juaclm8gc1n"
 metadata/SimpleGrassTextured = "2.0.5"
 
-[node name="SimpleGrassTextured5" type="MultiMeshInstance3D" parent="environment/blender base_map"]
+[node name="SimpleGrassTextured5" type="MultiMeshInstance3D" parent="environment/grass"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.705284, 0)
 material_override = SubResource("ShaderMaterial_cvubk")
 multimesh = SubResource("MultiMesh_axeuq")
 script = ExtResource("10_e0ngr")
@@ -538,7 +545,8 @@ sgt_tool_shape = {
 metadata/_custom_type_script = "uid://2juaclm8gc1n"
 metadata/SimpleGrassTextured = "2.0.5"
 
-[node name="SimpleGrassTextured6" type="MultiMeshInstance3D" parent="environment/blender base_map"]
+[node name="SimpleGrassTextured6" type="MultiMeshInstance3D" parent="environment/grass"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.705284, 0)
 material_override = SubResource("ShaderMaterial_eskoj")
 multimesh = SubResource("MultiMesh_7yui6")
 script = ExtResource("10_e0ngr")
