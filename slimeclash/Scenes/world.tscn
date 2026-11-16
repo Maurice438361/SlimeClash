@@ -1123,6 +1123,7 @@ transform = Transform3D(0.934515, 0, 0.355923, 0, 1, 0, -0.355923, 0, 0.934515, 
 script = ExtResource("46_l33cg")
 
 [node name="slimemob" parent="G_slime1" instance=ExtResource("6_slimemob")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.229714, 0)
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="G_slime1"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.754639, 0.00366211)
