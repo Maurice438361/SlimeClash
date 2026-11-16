@@ -1119,7 +1119,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.00399017, 0.738861, -7.6293
 shape = SubResource("BoxShape3D_s73dv")
 
 [node name="G_slime1" type="StaticBody3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 10.7992, -58.8149)
+transform = Transform3D(0.934515, 0, 0.355923, 0, 1, 0, -0.355923, 0, 0.934515, 0, 8.68088, -58.8149)
 script = ExtResource("46_l33cg")
 
 [node name="slimemob" parent="G_slime1" instance=ExtResource("6_slimemob")]
@@ -1129,7 +1129,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.754639, 0.00366211)
 shape = SubResource("BoxShape3D_vhf2b")
 
 [node name="G_slime2" type="StaticBody3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 8.74528, -54.754)
+transform = Transform3D(0.86694, 0, -0.498412, 0, 1, 0, 0.498412, 0, 0.86694, 5.32726, 8.40005, -57.9219)
 script = ExtResource("48_13n8b")
 
 [node name="slimemob" parent="G_slime2" instance=ExtResource("6_slimemob")]
@@ -1139,7 +1139,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.721283, 0.0214233)
 shape = SubResource("BoxShape3D_g44x5")
 
 [node name="G_slime3" type="StaticBody3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 21.7719, -47.8422)
+transform = Transform3D(-0.645002, 0.0468624, -0.762743, 0.0302596, 0.998901, 0.0357833, 0.763582, 0, -0.645711, 13.7967, 7.29576, -47.8422)
 script = ExtResource("49_uqdn7")
 
 [node name="slimemob" parent="G_slime3" instance=ExtResource("6_slimemob")]
@@ -1149,7 +1149,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.694092, -0.010437)
 shape = SubResource("BoxShape3D_kwnki")
 
 [node name="G_slime4" type="StaticBody3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 15.6771, -53.765)
+transform = Transform3D(0.850306, 0, -0.526288, 0, 1, 0, 0.526288, 0, 0.850306, 8.95628, 6.80867, -53.765)
 script = ExtResource("50_gwaj6")
 
 [node name="slimemob" parent="G_slime4" instance=ExtResource("6_slimemob")]
@@ -1159,7 +1159,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.100098, 0.657959, -0.01806
 shape = SubResource("BoxShape3D_cvubk")
 
 [node name="G_slime5" type="StaticBody3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 12.3709, -49.6454)
+transform = Transform3D(0.663378, 0, -0.748285, 0, 1, 0, 0.748285, 0, 0.663378, 9.73898, 6.62241, -49.6454)
 script = ExtResource("51_36g3o")
 
 [node name="slimemob" parent="G_slime5" instance=ExtResource("6_slimemob")]

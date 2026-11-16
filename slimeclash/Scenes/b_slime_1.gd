@@ -38,7 +38,7 @@ func show_slime_message() -> void:
 	slime_label.text = "+1 Wheel"
 
 	# Paarse kleur
-	slime_label.add_theme_color_override("font_color", Color("#B266FF"))
+	slime_label.add_theme_color_override("font_color", Color("#7B2CBF"))
 
 	# Tekstgrootte
 	slime_label.add_theme_font_size_override("font_size", 28)
@@ -50,5 +50,5 @@ func show_slime_message() -> void:
 
 	# Tekst verdwijnt na 2 seconden
 	var tween = hud.create_tween()
-	tween.tween_interval(2.0)
+	tween.tween_interval(1.0)
 	tween.tween_callback(hud.queue_free)

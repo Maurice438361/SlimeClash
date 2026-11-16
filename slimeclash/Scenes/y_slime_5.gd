@@ -36,9 +36,19 @@ func show_slime_message() -> void:
 	hud.add_child(slime_label)
 
 	slime_label.text = "+1 Wheel"
-	slime_label.position = Vector2(30, 30)
-	slime_label.add_theme_font_size_override("font_size", 34)
 
+	# Paarse kleur
+	slime_label.add_theme_color_override("font_color", Color("#7B2CBF"))
+
+	# Tekstgrootte
+	slime_label.add_theme_font_size_override("font_size", 28)
+
+	# Tekst centreren
+	slime_label.size = slime_label.get_combined_minimum_size()
+	var screen_size = get_viewport().get_visible_rect().size
+	slime_label.position = (screen_size - slime_label.size) / 2 + Vector2(0, -80)
+
+	# Tekst verdwijnt na 2 seconden
 	var tween = hud.create_tween()
-	tween.tween_interval(2.0)
+	tween.tween_interval(1.0)
 	tween.tween_callback(hud.queue_free)
