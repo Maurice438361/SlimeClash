@@ -19,6 +19,11 @@ func take_damage(amount: int) -> void:
 
 func die() -> void:
 	print("Mob died!")
+
+	var player = get_tree().get_first_node_in_group("player")
+	if player:
+		player.mob_killed = true
+
 	show_slime_message()
 	queue_free()
 

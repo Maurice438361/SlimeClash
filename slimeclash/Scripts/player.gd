@@ -6,12 +6,14 @@ var JUMP_VELOCITY = 4.5
 var sensitivity = 0.003
 
 var stash_found: bool = false
+var mob_killed: bool = false
 
 @onready var camera = $Camera3D
 
 func _ready():
 	Input.mouse_mode = Input.MOUSE_MODE_CAPTURED
 	print("Mouse sensitivity: ", sensitivity)
+	add_to_group("player")
 
 func _process(_delta):
 	if Input.is_action_just_pressed("escape"):

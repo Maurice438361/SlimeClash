@@ -14,6 +14,9 @@ extends Node3D
 @export var dialogues_after_stash: Array[String]
 @export var speaker_names_after_stash: Array[String]
 
+@export var dialogues_after_mob_kill: Array[String]
+@export var speaker_names_after_mob_kill: Array[String]
+
 var active_dialogues: Array[String]
 var active_speaker_names: Array[String]
 
@@ -28,22 +31,27 @@ func start_dialogue(body):
 	if body == player and !started:
 		started = true
 		current_dialogue = -1
-		
+
 		if is_stash:
 			player.stash_found = true
 
-		if !is_stash and player.stash_found and !dialogues_after_stash.is_empty():
+		if player.mob_killed and !dialogues_after_mob_kill.is_empty():
+			active_dialogues = dialogues_after_mob_kill
+			active_speaker_names = speaker_names_after_mob_kill
+
+		elif !is_stash and player.stash_found and !dialogues_after_stash.is_empty():
 			active_dialogues = dialogues_after_stash
 			active_speaker_names = speaker_names_after_stash
+
 		else:
 			active_dialogues = dialogues
 			active_speaker_names = speaker_names
-			
+
 		Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
 		player.SPEED = 0.0
 		player.sensitivity = 0.0
 		dialogue_ui.visible = true
-		
+
 		speaker.rotation_degrees.x = 0.0
 		speaker.rotation_degrees.z = 0.0
 		npc_animation.play("Use_Item")
