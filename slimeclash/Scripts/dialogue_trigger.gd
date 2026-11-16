@@ -10,6 +10,13 @@ extends Node3D
 @export var speaker_names: Array[String]
 @export var speaker: StaticBody3D
 
+@export var is_stash: bool = false
+@export var dialogues_after_stash: Array[String]
+@export var speaker_names_after_stash: Array[String]
+
+var active_dialogues: Array[String]
+var active_speaker_names: Array[String]
+
 var current_dialogue = -1
 var started = false
 
@@ -21,6 +28,17 @@ func start_dialogue(body):
 	if body == player and !started:
 		started = true
 		current_dialogue = -1
+		
+		if is_stash:
+			player.stash_found = true
+
+		if !is_stash and player.stash_found and !dialogues_after_stash.is_empty():
+			active_dialogues = dialogues_after_stash
+			active_speaker_names = speaker_names_after_stash
+		else:
+			active_dialogues = dialogues
+			active_speaker_names = speaker_names
+			
 		Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
 		player.SPEED = 0.0
 		player.sensitivity = 0.0
@@ -43,11 +61,11 @@ func end_dialogue():
 func continue_dialogue():
 	if !started:
 		return
-
+		
 	current_dialogue += 1
-
-	if current_dialogue < dialogues.size():
-		dialogue_text.text = dialogues[current_dialogue]
-		speaker_name.text = speaker_names[current_dialogue]
+	
+	if current_dialogue < active_dialogues.size():
+		dialogue_text.text = active_dialogues[current_dialogue]
+		speaker_name.text = active_speaker_names[current_dialogue]
 	else:
 		end_dialogue()

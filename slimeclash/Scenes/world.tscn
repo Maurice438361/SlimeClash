@@ -32,8 +32,11 @@
 [ext_resource type="PackedScene" uid="uid://blk1wyfledrlv" path="res://Assets/fantasy/GLB format/wall-wood-door.glb" id="20_hmc15"]
 [ext_resource type="PackedScene" uid="uid://bq37ko8kdq7r0" path="res://Assets/fantasy/GLB format/planks.glb" id="20_yq1aw"]
 [ext_resource type="PackedScene" uid="uid://pdw34rq5j6h6" path="res://Assets/fantasy/GLB format/pillar-wood.glb" id="22_no8kt"]
+[ext_resource type="Script" uid="uid://cwkfjp00oocyp" path="res://Scenes/mob.gd" id="23_i4fjy"]
+[ext_resource type="PackedScene" uid="uid://cf8acqkvv1fif" path="res://Assets/fantasy/GLB format/cart.glb" id="23_r74th"]
 [ext_resource type="PackedScene" uid="uid://bjx25f5d3uper" path="res://Assets/fantasy/GLB format/stairs-wood.glb" id="23_xbk3s"]
 [ext_resource type="PackedScene" uid="uid://dkpw7oh0g4bi1" path="res://Assets/NPC/mage_animation.tscn" id="36_ochwf"]
+[ext_resource type="PackedScene" uid="uid://0ruicpglr7dt" path="res://Assets/fantasy/GLB format/wheel.glb" id="37_04jkj"]
 [ext_resource type="Script" uid="uid://d112r2qh7fxwn" path="res://Scenes/b_slime_1.gd" id="38_b4e6k"]
 [ext_resource type="PackedScene" uid="uid://cw5wwg4o4dkgy" path="res://Assets/mobs/slimemobs3.glb" id="39_0sgyr"]
 [ext_resource type="Script" uid="uid://cosrbtfdmbbfy" path="res://Scenes/b_slime_2.gd" id="40_l33cg"]
@@ -424,6 +427,9 @@ shape = SubResource("ConcavePolygonShape3D_fo5ed")
 [node name="dialogue_trigger" parent="." instance=ExtResource("2_go701")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -46.1066, 6.46159, 24.9602)
 
+[node name="mob" parent="." instance=ExtResource("4_8j60k")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -18.6884, 8.83365, -9.9907)
+
 [node name="environment" type="Node3D" parent="."]
 
 [node name="blender base_map" parent="environment" instance=ExtResource("5_fo5ed")]
@@ -808,7 +814,7 @@ transform = Transform3D(4, 0, 0, 0, 4, 0, 0, 0, 4, 29.2005, 6.40735, 33.9153)
 transform = Transform3D(4, 0, 0, 0, 4, 0, 0, 0, 4, 28.2005, 6.00503, 48.9153)
 
 [node name="tree11" parent="environment/pine_trees" instance=ExtResource("11_7yui6")]
-transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, 26.2005, 24.373, -17.0847)
+transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, 26.2005, 24.7068, -17.0847)
 
 [node name="tree12" parent="environment/pine_trees" instance=ExtResource("11_7yui6")]
 transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, 22.2005, 25.0984, 12.9153)
@@ -874,6 +880,12 @@ transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, -51.2945, 6, 49.2825)
 
 [node name="tree2round15" parent="environment/round_canopy_trees" instance=ExtResource("10_0fj1v")]
 transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, -51.7805, 6, 42.0872)
+
+[node name="cart2" parent="environment" instance=ExtResource("23_r74th")]
+transform = Transform3D(-1.59432, 0.3816, 1.14565, 0.0573818, 1.91931, -0.559437, -1.20617, -0.413092, -1.54094, -51.0696, 7.09629, 41.2643)
+
+[node name="cart3" parent="environment" instance=ExtResource("23_r74th")]
+transform = Transform3D(0.121412, 0.418055, -1.95205, -0.000376248, 1.95566, 0.418805, 1.99631, -0.0250568, 0.118799, -52.4469, 6.78927, 38.3647)
 
 [node name="house" parent="." instance=ExtResource("13_1cojt")]
 transform = Transform3D(-1.18021e-07, 0, 2.7, 0, 2.7, 0, -2.7, 0, -1.18021e-07, -46.0936, 10.2858, 45.2254)
@@ -1012,8 +1024,8 @@ shape = SubResource("CapsuleShape3D_1cojt")
 
 [node name="dialogue_trigger" parent="npc" node_paths=PackedStringArray("speaker") instance=ExtResource("2_go701")]
 transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 0, 0, 0)
-dialogues = Array[String](["Hello there, I’ve never seen you before!", "I see you crashed your ship.", "Welcome to the island, I bet we’ll get along just fine.", "I am the local shopkeeper.", "But alas! I need to get back to work.", "I need to make more slime for my products.", "The local slimes keep stealing my slimeballs.", "Silly little things, they can't even digest it! It just floats around inside them like a lavalamp!"])
-speaker_names = Array[String](["Anri", "Anri", "Anri", "Anri", "Anri the shopkeeper", "Anri the shopkeeper", "Anri the shopkeeper", "Anri the shopkeeper"])
+dialogues = Array[String](["Hello there, I’ve never seen you before!", "I see you crashed your ship.", "Welcome to the island, I bet we’ll get along just fine.", "I am Anri, the local shopkeeper.", "But alas! I need to get back to work.", "I need to make more wheels for my carts", "The local slimes keep stealing my wheels", "Something about the way they roll seems to excite them, silly little things!", "I've even seen them eat the wheels, they just float inside them like a lavalamp!", "Anyway, I'm rambling, go explore our beautiful island!"])
+speaker_names = Array[String](["Anri", "Anri", "Anri", "Anri", "Anri the shopkeeper", "Anri the shopkeeper", "Anri the shopkeeper", "Anri the shopkeeper", "Anri the shopkeeper", "Anri the shopkeeper"])
 speaker = NodePath("..")
 
 [node name="B_slime1" type="StaticBody3D" parent="."]
@@ -1168,3 +1180,46 @@ script = ExtResource("51_36g3o")
 [node name="CollisionShape3D" type="CollisionShape3D" parent="G_slime5"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0199585, 0.719482, -0.0164185)
 shape = SubResource("BoxShape3D_eskoj")
+dialogues_after_stash = Array[String](["Oh wow! You've found some wheels!", "They have a stash on top of the hill? ", "Thank you so much! I will get the rest later.", "I will remember this kindness newcomer!"])
+speaker_names_after_stash = Array[String](["Anri the shopkeeper", "Anri the shopkeeper", "Anri the shopkeeper", "Anri the shopkeeper"])
+
+[node name="stash" type="StaticBody3D" parent="."]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 25.2729, 24.6919, -16.5601)
+
+[node name="wheel2" parent="stash" instance=ExtResource("37_04jkj")]
+transform = Transform3D(0.298208, 0.954501, 0, -0.954501, 0.298208, 0, 0, 0, 1, -0.503363, 0.29303, -0.459557)
+
+[node name="wheel3" parent="stash" instance=ExtResource("37_04jkj")]
+transform = Transform3D(0.298208, 0.954501, 0, -0.954501, 0.298208, 0, 0, 0, 1, -0.503363, 0.428375, -0.459557)
+
+[node name="wheel4" parent="stash" instance=ExtResource("37_04jkj")]
+transform = Transform3D(0.91906, 0.394118, 0, -0.394118, 0.91906, 0, 0, 0, 1, -0.952465, -0.00121307, -0.604607)
+
+[node name="wheel5" parent="stash" instance=ExtResource("37_04jkj")]
+transform = Transform3D(0.298208, 0.954501, 0, -0.954501, 0.298208, 0, 0, 0, 1, -0.180145, 0.29303, -0.0527458)
+
+[node name="wheel6" parent="stash" instance=ExtResource("37_04jkj")]
+transform = Transform3D(0.298208, 0.954501, 0, -0.954501, 0.298208, 0, 0, 0, 1, -0.361441, 0.29303, 0.452816)
+
+[node name="wheel7" parent="stash" instance=ExtResource("37_04jkj")]
+transform = Transform3D(0.298208, 0.954501, 0, -0.954501, 0.298208, 0, 0, 0, 1, -0.192461, 0.44648, -0.0388546)
+
+[node name="wheel8" parent="stash" instance=ExtResource("37_04jkj")]
+transform = Transform3D(0.298208, 0.954501, 0, -0.860368, 0.268799, -0.43303, -0.413327, 0.129133, 0.90138, -0.623384, 0.29303, 0.0513535)
+
+[node name="wheel9" parent="stash" instance=ExtResource("37_04jkj")]
+transform = Transform3D(0.298208, 0.954501, 0, -0.954501, 0.298208, 0, 0, 0, 1, -0.0992527, 0.29303, -0.635506)
+
+[node name="wheel10" parent="stash" instance=ExtResource("37_04jkj")]
+transform = Transform3D(0.298208, 0.954501, 0, -0.954501, 0.298208, 0, 0, 0, 1, 0.393127, 0.29303, -0.0105801)
+
+[node name="wheel11" parent="stash" instance=ExtResource("37_04jkj")]
+transform = Transform3D(0.298208, 0.954501, 0, -0.954501, 0.298208, 0, 0, 0, 1, 0.400238, 0.428375, -0.024868)
+
+[node name="wheel12" parent="stash" instance=ExtResource("37_04jkj")]
+transform = Transform3D(0.202067, 0.0866522, 0.975531, -0.394118, 0.91906, 0, -0.896571, -0.384475, 0.219863, 0.689087, 0.306156, 0.236456)
+
+[node name="stash_trigger" parent="stash" node_paths=PackedStringArray("speaker") instance=ExtResource("2_go701")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.34201, 0.451677, 0.329871)
+speaker = NodePath("..")
+is_stash = true
