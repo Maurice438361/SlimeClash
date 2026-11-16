@@ -3,8 +3,10 @@ extends CharacterBody3D
 
 var SPEED = 5.0
 var JUMP_VELOCITY = 4.5
-
 var sensitivity = 0.003
+
+var stash_found: bool = false
+
 @onready var camera = $Camera3D
 
 func _ready():
